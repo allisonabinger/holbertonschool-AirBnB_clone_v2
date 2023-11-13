@@ -37,6 +37,7 @@ def show_py_text(text):
     py_text = text.replace('_', ' ')
     return 'Python {}'.format(py_text)
 
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def show_num(n):
     """shows the number given in url
