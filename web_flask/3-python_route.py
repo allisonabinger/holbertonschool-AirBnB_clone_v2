@@ -35,7 +35,7 @@ def show_py_text(text):
     also replaces underscores with a space
     """
     py_text = text.replace('_', ' ')
-    return 'C {}'.format(py_text)
+    return 'Python {}'.format(py_text)
 
 
 if __name__ == '__main__':
