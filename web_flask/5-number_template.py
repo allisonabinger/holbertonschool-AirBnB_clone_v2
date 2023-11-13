@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Python script that starts a Flask Web App with various routes """
-from flask import Flask, render_remplate
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
