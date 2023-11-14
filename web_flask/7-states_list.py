@@ -1,17 +1,17 @@
+#!/usr/bin/python3
 """Python script that starts a Flask Web App with various routes """
-from flask import Flask, render_template, g
+from flask import Flask, render_template
 from models import storage
 from models.state import State
-from models.city import City
-
 
 app = Flask(__name__)
 
 
-@app.route('/cities_by_states', strict_slashes=False)
-def cities_by_states():
-    """ displays lists of states and cities from db storage"""
-    states = sorted(list(storage.all(State).values()), key=lambda x: x.name)
+@app.route('/states_list', strict_slashes=False)
+def states_list():
+    """returns the key/value pair for a list of states"""
+    states = storage.all(State).values() 
+    """fetching states from storage - gettings list of dictionary objects"""
     return render_template('7-states_list.html', states=states)
 
 
