@@ -9,9 +9,8 @@ app = Flask(__name__)
 
 @app.route('/cities_by_states', strict_slashes=False)
 def city_state():
-    """returns the key/value pair for a list of cities by their state"""
-    states = storage.all(State).values()
-    """fetching states from storage - gettings list of dictionary objects"""
+    states = storage.all("State")
+    """fetching states from storage"""
     return render_template('8-cities_by_state.html', states=states)
 
 
