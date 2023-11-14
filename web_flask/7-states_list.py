@@ -16,12 +16,10 @@ def cities_by_states():
 
 
 @app.teardown_appcontext
-def teardown(error=None):
-    """ends SQLAlchemy session"""
-   """ stg = getattr(g, "storage", None)
-    if stg is not None:
-        stg.close()"""
-""""""
+def teardown_context(exception=None):
+    """closes session for teardown"""
+    storage.close()
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

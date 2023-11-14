@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Python script that starts a Flask Web App that says 'Hello HBNB!' or 'HBNB' """
+"""Python script that starts a Flask Web App with different text displayed
+based on route provided in url"""
 from flask import Flask
 
 app = Flask(__name__)
